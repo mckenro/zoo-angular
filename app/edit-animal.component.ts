@@ -6,13 +6,21 @@ import { Animal } from './animal.model';
   template: `
   <div *ngIf="selectedAnimal">
     <h3>Edit {{selectedAnimal.name}}'s Details</h3>
-    <label>Enter Name</label>
-    <input type="text" [(ngModel)]="selectedAnimal.name">
-    <label>Enter Age</label>
-    <input type="number" [(ngModel)]="selectedAnimal.age">
-    <label>Enter Number Caretakers</label>
-    <input type="number" [(ngModel)]="selectedAnimal.caretakers">
-    <button (click)="doneButtonClicked()">Done</button>
+    <div class="form-group">
+      <label>Enter Name</label>
+      <input class="form-control" type="text" [(ngModel)]="selectedAnimal.name">
+    </div>
+    <div class="form-group">
+      <label>Enter Age</label>
+      <input class="form-control" type="number" [(ngModel)]="selectedAnimal.age">
+    </div>
+    <div class="form-group">
+      <label>Enter Number Caretakers</label>
+      <input class="form-control" type="number" [(ngModel)]="selectedAnimal.caretakers">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success btn-sm" (click)="doneButtonClicked()">Done</button>
+    </div>
   </div>
   `
 })
