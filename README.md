@@ -1,12 +1,12 @@
-# _Angular Start Files_
+# _Zoo Animal Inventory_
 
-#### _Brief description._
+#### _This project is the week 3, Advanced Javascript Individual Project for Epicodus. This app will allow zoo keepers to keep create and edit details regarding the animals at the zoo._
 
 #### By _**Rob McKenzie**_
 
 ## Description
 
-_Detailed description._
+_Users of the app will be able to log new animals for the zoo using a form to include the animal's species, name, age, diet, zoo location, number of required caretakers, sex, one like, and one dislike. Users can view a list of animals they have logged. Users can view all animals, only young animals (under 2 years old), or only mature animals (over 2 years old). Users can edit an animals name, age, or number of caretakers._
 
 ## Setup/Installation Requirements
 * _Download or clone project files_
@@ -17,12 +17,13 @@ _Detailed description._
     * _gulp serve_
 
 ## Specs
-* _Spec 1_
-* _Spec 2._
-* _Spec 3._
+* _User can view a list of animals._
+* _User can submit new animals via a form._
+* _User can sort animals by age._
+* _User can edit entries for animals via a form._
 
 ## Known Bugs
-_No known bugs,_
+_No known bugs_
 
 ## Support and contact details
 
