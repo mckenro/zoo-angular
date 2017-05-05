@@ -6,12 +6,27 @@ import { FilterPipe } from './filter.pipe';
   selector: 'animal-list',
   template:`
   <h2>Animals</h2>
-  <form id="filter">
-    <label>Filter Animals by Species</label>
-    <input class="form-control" type="text" [(ngModel)]="term" name="term" />
-  </form>
   <div class="row">
-    <div class="col-md-4" *ngFor="let currentAnimal of childAnimalList | filter:term">
+    <div class="col-md-6">
+      <form id="filter">
+        <label>Filter Animals by Species</label>
+        <input class="form-control" type="text" [(ngModel)]="term" name="term" />
+      </form>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+      <label for="animalAge">Filter by Age</label>
+        <select id="animalAge" class="form-control" (change)="onChange($event.target.value)">
+          <option value="allAnimals">All Animals</option>
+          <option value="youngerAnimals">Younger Animals (2 years and under)</option>
+          <option value="olderAnimals">Older Animals (over 2 years)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let currentAnimal of childAnimalList | age:filterByAge | filter:term">
       <div class="panel panel-info">
         <div class="panel-heading">
           <h4 class="panel-title">{{currentAnimal.name}}</h4>
@@ -39,6 +54,12 @@ export class AnimalListComponent {
 
   editAnimalClicked(animalToEdit: Animal) {
     this.clickSender.emit(animalToEdit);
+  }
+
+  filterByAge: string = "allAnimals";
+
+  onChange(optionFromMenu) {
+    this.filterByAge = optionFromMenu;
   }
 
 }
