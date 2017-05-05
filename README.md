@@ -8,6 +8,13 @@
 
 _Users of the app will be able to log new animals for the zoo using a form to include the animal's species, name, age, diet, zoo location, number of required caretakers, sex, one like, and one dislike. Users can view a list of animals they have logged. Users can view all animals, only young animals (under 2 years old), or only mature animals (over 2 years old). Users can edit an animals name, age, or number of caretakers._
 
+## Future Features
+
+* _Ability to have multiple users_
+* _Ability to add photos of animals_
+* _Incorporate a database_
+* _Add relationships between animals_
+
 ## Setup/Installation Requirements
 * _Download or clone project files_
 * _Run the following in terminal_
